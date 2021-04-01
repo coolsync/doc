@@ -1,0 +1,38 @@
+{{define "chapter02/arr_struct.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{/*第一种方式*/}}
+{{range .}}
+    {{.Id}}
+    {{.Name}}
+    {{.Age}}
+    {{.Addr}}
+    <br>
+{{end}}
+{{/*第二种方式*/}}
+
+<br>
+{{/*{{range $i,$v := .}}*/}}
+        {{/*{{$v.Id}}*/}}
+        {{/*{{$v.Name}}*/}}
+        {{/*{{$v.Age}}*/}}
+        {{/*{{$v.Addr}}*/}}
+        {{/*<br>*/}}
+{{/*{{end}}*/}}
+
+{{range $v := .}}
+    {{$v.Id}}
+    {{$v.Name}}
+    {{$v.Age}}
+    {{$v.Addr}}
+    <br>
+{{end}}
+</body>
+</html>
+
+{{end}}

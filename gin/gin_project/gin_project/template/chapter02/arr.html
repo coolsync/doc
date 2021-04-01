@@ -1,0 +1,27 @@
+{{define "chapter02/arr.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{{/*第一种循环方式*/}}
+
+{{range .}}
+    {{.}}
+{{end}}
+
+<br>
+{{/*第二种循环方式*/}}
+
+{{range $i,$v := .}}
+    {{/*{{$i}}*/}}
+    {{$v}}
+{{end}}
+</body>
+</html>
+
+        {{end}}

@@ -1,0 +1,23 @@
+{{define "chapter04/bing_form.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+form——bind页面 <br>
+
+<form action="/chapter04/do_bind_form" method="post">
+    <input type="text" name="name" placeholder="请输入用户名"><br>
+    <input type="text" name="age" placeholder="请输入用年龄"><br>
+    <input type="text" name="addr" placeholder="请输入用地址"><br>
+    <input type="submit" value="提交">
+</form>
+
+
+</body>
+</html>
+
+        {{end}}

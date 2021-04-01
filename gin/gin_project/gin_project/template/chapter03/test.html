@@ -1,0 +1,131 @@
+{{define "chapter03/test.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+模板语法 <br>
+
+{{.name}}
+<br>
+
+{{range .arr}}
+    {{.}}
+    {{$.name}}
+{{end}}
+
+<br>
+
+{{range $i,$v := .arr}}
+    {{$i}}
+    {{$v}}
+{{end}}
+
+
+<br>
+
+{{"hallen"}}
+<br>
+{{'a'}} {{'A'}}
+
+<br>
+
+{{`a`}}
+<br>
+
+{{print "hallen"}}
+<br>
+{{print nil}}
+<br>
+{{/*{{nil}}*/}}
+
+{{/*自定义变量*/}}
+{{$name := "hallen1"}}
+
+{{$name}}
+
+<br>
+
+{{.name | len}}
+
+
+<br>
+
+{{if .name1}}
+    欢迎：{{.name}}
+{{else}}
+    欢迎：游客
+{{end}}
+
+<br>
+
+
+{{if .name}}
+    欢迎：{{.name}}
+        {{if .birth}}
+            生日快乐
+        {{else}}
+        {{end}}
+{{else}}
+    欢迎：游客
+{{end}}
+
+<br>
+
+{{range .arr}}
+    {{.}}
+{{end}}
+
+<br>
+{{range $v := .arr}}
+    {{/*{{$v}}*/}}
+    {{.}}
+{{end}}
+<br>
+
+{{range .arr}}
+    {{.}}
+{{else}}
+    暂无数据
+{{end}}
+
+<br>
+
+{{.article.Id}}
+{{.article.Title}}
+{{.article.Desc}}
+
+<br>
+{{with .article1}}
+    {{.Id}}
+    {{.Title}}
+    {{.Desc}}
+{{else}}
+    暂无数据
+{{end}}
+
+<br>
+
+
+{{template "chapter03/base.html" .}}
+
+<br>
+{{/*这是模板注释*/}}
+
+{{/*  这是模板注释*/}}
+
+{{/*
+这是模板块注释
+这是模板块注释
+这是模板块注释
+这是模板块注释
+*/}}
+
+<br>
+</body>
+</html>
+
+        {{end}}

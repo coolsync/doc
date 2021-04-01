@@ -1,0 +1,23 @@
+{{define "chapter02/slice.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+slice页面
+<br>
+
+{{range .}}
+    {{.}}
+{{end}}
+<br>
+
+{{range $v := .}}
+    {{$v}}
+{{end}}
+</body>
+</html>
+{{end}}

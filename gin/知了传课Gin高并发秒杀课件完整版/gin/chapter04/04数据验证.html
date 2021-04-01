@@ -1,0 +1,1962 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第四节:数据验证 | go语言gin框架+vue3+微服务课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter04/05自定义验证器.html" />
+    
+    
+    <link rel="prev" href="../chapter04/03数据绑定--Mustbind.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.4"
+        data-chapter-title="第四节:数据验证"
+        data-filepath="chapter04/04数据验证.md"
+        data-basepath=".."
+        data-revision="Thu Dec 24 2020 11:24:40 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程大纲
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01/index.html">
+            
+                
+                    <a href="../chapter01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第一章：gin框架前奏
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter01/01gin框架介绍.html">
+            
+                
+                    <a href="../chapter01/01gin框架介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        第一节：gin框架介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter01/02环境搭建.html">
+            
+                
+                    <a href="../chapter01/02环境搭建.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        第二节：环境搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter01/03我的第一个gin项目.html">
+            
+                
+                    <a href="../chapter01/03我的第一个gin项目.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        第三节：我的第一个gin项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter01/04运行原理.html">
+            
+                
+                    <a href="../chapter01/04运行原理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        第四节：运行原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter01/05go-mod包管理.html">
+            
+                
+                    <a href="../chapter01/05go-mod包管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        第五节：go-mod包管理
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/index.html">
+            
+                
+                    <a href="../chapter02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第二章：数据交互--模板渲染
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/01使用模板.html">
+            
+                
+                    <a href="../chapter02/01使用模板.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        第一节：使用模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/02静态文件的使用.html">
+            
+                
+                    <a href="../chapter02/02静态文件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        第二节：静态文件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter02/03自定义模板渲染器.html">
+            
+                
+                    <a href="../chapter02/03自定义模板渲染器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        第三节：自定义模板渲染器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chapter02/04其他数据类型渲染.html">
+            
+                
+                    <a href="../chapter02/04其他数据类型渲染.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        第四节：其他数据类型渲染
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="chapter02/05获取GET请求数据.html">
+            
+                
+                    <a href="../chapter02/05获取GET请求数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        第五节：获取GET请求数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="chapter02/06获取POST请求数据.html">
+            
+                
+                    <a href="../chapter02/06获取POST请求数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        第六节：获取POST请求数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="chapter02/07参数绑定.html">
+            
+                
+                    <a href="../chapter02/07参数绑定.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        第七节：参数绑定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="chapter02/08文件上传.html">
+            
+                
+                    <a href="../chapter02/08文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        第八节：文件上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="chapter02/09其他数据格式输出.html">
+            
+                
+                    <a href="../chapter02/09其他数据格式输出.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        第九节：其他数据格式输出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="chapter02/10重定向.html">
+            
+                
+                    <a href="../chapter02/10重定向.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        第十节：重定向
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="chapter02/11自定义HTTP配置.html">
+            
+                
+                    <a href="../chapter02/11自定义HTTP配置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        第十一节：自定义HTTP配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="chapter02/12章节小结.html">
+            
+                
+                    <a href="../chapter02/12章节小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        第十二节：章节小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03/index.html">
+            
+                
+                    <a href="../chapter03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第三章：模板语法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter03/01模板语法1.html">
+            
+                
+                    <a href="../chapter03/01模板语法1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        第一节：模板语法一
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter03/02模板语法2.html">
+            
+                
+                    <a href="../chapter03/02模板语法2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        第二节：模板语法二
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chapter03/03模板函数1.html">
+            
+                
+                    <a href="../chapter03/03模板函数1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        第三节：模板函数一
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="chapter03/04模板函数2.html">
+            
+                
+                    <a href="../chapter03/04模板函数2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        第四节：模板函数二
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="chapter03/05自定义模板函数.html">
+            
+                
+                    <a href="../chapter03/05自定义模板函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        第五节：自定义模板函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04/index.html">
+            
+                
+                    <a href="../chapter04/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第四章：gin--数据绑定及验证
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter04/00数据绑定介绍.html">
+            
+                
+                    <a href="../chapter04/00数据绑定介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        第一节:数据绑定介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapter04/01数据绑定--Shouldbind.html">
+            
+                
+                    <a href="../chapter04/01数据绑定--Shouldbind.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        第二节:数据绑定--Should bind
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="chapter04/03数据绑定--Mustbind.html">
+            
+                
+                    <a href="../chapter04/03数据绑定--Mustbind.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        第三节:数据绑定--Must bind
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="chapter04/04数据验证.html">
+            
+                
+                    <a href="../chapter04/04数据验证.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        第四节:数据验证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="chapter04/05自定义验证器.html">
+            
+                
+                    <a href="../chapter04/05自定义验证器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        第五节:自定义验证器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="chapter04/06beego的验证器.html">
+            
+                
+                    <a href="../chapter04/06beego的验证器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        第六节:beego的验证器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter05/index.html">
+            
+                
+                    <a href="../chapter05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第五章：gin--路由组
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="chapter05/01路由组介绍.html">
+            
+                
+                    <a href="../chapter05/01路由组介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        第一节:路由组介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="chapter02/02路由参数.html">
+            
+                
+                    <a href="../chapter02/02路由参数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        第二节:路由抽取
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter06/index.html">
+            
+                
+                    <a href="../chapter06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第六章：gin--中间件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="chapter06/01中间件的介绍.html">
+            
+                
+                    <a href="../chapter06/01中间件的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        第一节:中间件的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="chapter06/02中间件的使用.html">
+            
+                
+                    <a href="../chapter06/02中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        第二节:中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="chapter06/03内置中间件.html">
+            
+                
+                    <a href="../chapter06/03内置中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        第三节:内置中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter06/04自定义中间件.html">
+            
+                
+                    <a href="../chapter06/04自定义中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        第四节:自定义中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="chapter06/05中间件中的Next和Abort.html">
+            
+                
+                    <a href="../chapter06/05中间件中的Next和Abort.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        第五节:中间件中的Next和Abort
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="chapter06/06路由组中间件的使用.html">
+            
+                
+                    <a href="../chapter06/06路由组中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        第六节:路由组中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="chapter06/07全局中间件的使用.html">
+            
+                
+                    <a href="../chapter06/07全局中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        第七节:全局中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="chapter06/08局部中间件的使用.html">
+            
+                
+                    <a href="../chapter06/08局部中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        第八节:局部中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="chapter06/09BasicAuth中间件.html">
+            
+                
+                    <a href="../chapter06/09BasicAuth中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        第九节:BasicAuth中间件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter07/index.html">
+            
+                
+                    <a href="../chapter07/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第七章：gorm
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="chapter07/01gorm介绍.html">
+            
+                
+                    <a href="../chapter07/01gorm介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        第一节:gorm介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="chapter07/02DDL操作.html">
+            
+                
+                    <a href="../chapter07/02DDL操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        第二节:DDL操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="chapter07/03DML操作.html">
+            
+                
+                    <a href="../chapter07/03DML操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        第三节:DML操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="chapter07/04模型定义一.html">
+            
+                
+                    <a href="../chapter07/04模型定义一.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        第四节:模型定义一
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="chapter07/05模型定义二.html">
+            
+                
+                    <a href="../chapter07/05模型定义二.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        第五节:模型定义二
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="chapter07/06模型定义三.html">
+            
+                
+                    <a href="../chapter07/06模型定义三.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        第六节:模型定义三
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="chapter07/07一对一操作.html">
+            
+                
+                    <a href="../chapter07/07一对一操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        第七节:一对一操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="chapter07/08一对多操作.html">
+            
+                
+                    <a href="../chapter07/08一对多操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        第八节:一对多操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="chapter07/09多对多操作.html">
+            
+                
+                    <a href="../chapter07/09多对多操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        第九节:多对多操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="chapter07/10DB接口.html">
+            
+                
+                    <a href="../chapter07/10DB接口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.10.</b>
+                        
+                        第十节:DB接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="chapter07/11错误处理.html">
+            
+                
+                    <a href="../chapter07/11错误处理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.11.</b>
+                        
+                        第十一节:错误处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="chapter07/12事务.html">
+            
+                
+                    <a href="../chapter07/12事务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.12.</b>
+                        
+                        第十二节:事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="chapter07/13四复合主键.html">
+            
+                
+                    <a href="../chapter07/13四复合主键.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.13.</b>
+                        
+                        第十三节:复合主键
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="chapter07/14原生sql.html">
+            
+                
+                    <a href="../chapter07/14原生sql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.14.</b>
+                        
+                        第十四节:原生sql
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.15" data-path="chapter07/15配置文件.html">
+            
+                
+                    <a href="../chapter07/15配置文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.15.</b>
+                        
+                        第十五节:配置文件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter08/index.html">
+            
+                
+                    <a href="../chapter08/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第八章：gin--日志
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="chapter08/01日志介绍.html">
+            
+                
+                    <a href="../chapter08/01日志介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        第一节:日志介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="chapter08/02日志的使用.html">
+            
+                
+                    <a href="../chapter08/02日志的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        第二节:日志的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="chapter08/03logrus第三方库的使用.html">
+            
+                
+                    <a href="../chapter08/03logrus第三方库的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        第三节:logrus第三方库的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="chapter08/04logrus使用配置文件.html">
+            
+                
+                    <a href="../chapter08/04logrus使用配置文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        第四节:logrus使用配置文件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter09/index.html">
+            
+                
+                    <a href="../chapter09/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第九章：cookie和session
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="chapter09/01cookie和session介绍.html">
+            
+                
+                    <a href="../chapter09/01cookie和session介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        第一节:cookie和session介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="chapter09/02gin中使用session.html">
+            
+                
+                    <a href="../chapter09/02gin中使用session.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        第二节:gin中使用session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="chapter09/03linux中安装redis.html">
+            
+                
+                    <a href="../chapter09/03linux中安装redis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        第三节:linux中安装redis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="chapter09/04基于redis的存储引擎.html">
+            
+                
+                    <a href="../chapter09/04基于redis的存储引擎.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        第四节:基于redis的存储引擎
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="chapter10/index.html">
+            
+                
+                    <a href="../chapter10/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第十章：vue/cli脚手架扫盲
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="chapter10/01环境搭建.html">
+            
+                
+                    <a href="../chapter10/01环境搭建.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        第一节:环境搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="chapter10/02npm的使用.html">
+            
+                
+                    <a href="../chapter10/02npm的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        第二节:npm的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="chapter10/03vue-vli脚手架.html">
+            
+                
+                    <a href="../chapter10/03vue-vli脚手架.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        第三节:vue-cli脚手架
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="chapter10/04组件定义.html">
+            
+                
+                    <a href="../chapter10/04组件定义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        第四节:组件定义
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="chapter10/05Element-UI组件库使用.html">
+            
+                
+                    <a href="../chapter10/05Element-UI组件库使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        第五节:Element UI组件库使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="chapter10/06ant-design-vue组件库使用.html">
+            
+                
+                    <a href="../chapter10/06ant-design-vue组件库使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.6.</b>
+                        
+                        第六节:ant-design-vue组件库使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="chapter11/index.html">
+            
+                
+                    <a href="../chapter11/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第十一章：数据交互--vue渲染
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="chapter11/01vue-router路由管理.html">
+            
+                
+                    <a href="../chapter11/01vue-router路由管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        第一节:vue-router路由管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="chapter11/02axios的使用.html">
+            
+                
+                    <a href="../chapter11/02axios的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        第二节:axios的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="chapter11/03get请求.html">
+            
+                
+                    <a href="../chapter11/03get请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                        第三节:get请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="chapter11/04解决跨域请求.html">
+            
+                
+                    <a href="../chapter11/04解决跨域请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                        第四节:解决跨域请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="chapter11/05post请求.html">
+            
+                
+                    <a href="../chapter11/05post请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                        第五节:post请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.6" data-path="chapter11/06文件上传.html">
+            
+                
+                    <a href="../chapter11/06文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                        第六节:文件上传
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="chapter12/index.html">
+            
+                
+                    <a href="../chapter12/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        第十二章：实战\(gin+vue\)
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="chapter12/01技术选型.html">
+            
+                
+                    <a href="../chapter12/01技术选型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                        第一节:技术选型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="chapter12/02实战介绍.html">
+            
+                
+                    <a href="../chapter12/02实战介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                        第二节:实战介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="chapter12/03表设计.html">
+            
+                
+                    <a href="../chapter12/03表设计.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                        第三节:表设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="chapter12/04数据校验.html">
+            
+                
+                    <a href="../chapter12/04数据校验.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.4.</b>
+                        
+                        第四节:数据校验
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="chapter12/05发送邮件.html">
+            
+                
+                    <a href="../chapter12/05发送邮件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.5.</b>
+                        
+                        第五节:发送邮件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="chapter12/06jwt-token认证.html">
+            
+                
+                    <a href="../chapter12/06jwt-token认证.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.6.</b>
+                        
+                        第六节:jwt-token认证
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="chapter12/07前端状态管理.html">
+            
+                
+                    <a href="../chapter12/07前端状态管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.7.</b>
+                        
+                        第七节:前端状态管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.8" data-path="chapter12/08antdv分页.html">
+            
+                
+                    <a href="../chapter12/08antdv分页.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.8.</b>
+                        
+                        第八节:antdv分页
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.9" data-path="chapter12/09jmeter压测工具.html">
+            
+                
+                    <a href="../chapter12/09jmeter压测工具.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.9.</b>
+                        
+                        第九节:jmeter压测工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.10" data-path="chapter12/10秒杀接口压测.html">
+            
+                
+                    <a href="../chapter12/10秒杀接口压测.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.10.</b>
+                        
+                        第十节:秒杀接口压测
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.11" data-path="chapter12/11秒杀优化.html">
+            
+                
+                    <a href="../chapter12/11秒杀优化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.11.</b>
+                        
+                        第十一节:秒杀优化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.12" data-path="chapter12/12rabbitmq.html">
+            
+                
+                    <a href="../chapter12/12rabbitmq.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.12.</b>
+                        
+                        第十二节:rabbitmq
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.13" data-path="chapter12/13redis的使用.html">
+            
+                
+                    <a href="../chapter12/13redis的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.13.</b>
+                        
+                        第十三节:redis的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="chapter13/index.html">
+            
+                
+                    <a href="../chapter13/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        第十三章：git版本控制
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1" data-path="chapter13/01gitlab介绍及安装.html">
+            
+                
+                    <a href="../chapter13/01gitlab介绍及安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                        第一节:gitlab介绍及安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="chapter13/02初始化项目.html">
+            
+                
+                    <a href="../chapter13/02初始化项目.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.2.</b>
+                        
+                        第二节:初始化项目
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="chapter14/index.html">
+            
+                
+                    <a href="../chapter14/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        第十四章：项目部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="chapter14/01windows部署.html">
+            
+                
+                    <a href="../chapter14/01windows部署.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        第一节:windows部署
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="chapter14/02linux部署.html">
+            
+                
+                    <a href="../chapter14/02linux部署.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        第二节:linux部署
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >go语言gin框架+vue3+微服务课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6570;&#x636E;&#x9A8C;&#x8BC1;">&#x6570;&#x636E;&#x9A8C;&#x8BC1;</h1>
+<p>go-playground/validator.v8&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;</p>
+<h2 id="&#x4E00;&#x3001;&#x4F7F;&#x7528;">&#x4E00;&#x3001;&#x4F7F;&#x7528;</h2>
+<p>&#x4F7F;&#x7528;structTag&#x7684;binding&#xFF0C;&#x5982;&#xFF1A;binding:&quot;required&quot;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;<em><strong>&#x7A7A;&#x503C;&#x6216;&#x8005;&#x7C7B;&#x578B;&#x4E0D;&#x5339;&#x914D;</strong></em>&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x5230;400 (Bad Request)</p>
+<p>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;Key: &apos;User.Name&apos; Error:Field validation for &apos;Name&apos; failed on the &apos;required&apos; tag</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>type User struct {
+    Id int `form:&quot;id&quot;`
+    Name string `form:&quot;name&quot; binding:&quot;required&quot;`   // &#x4E0D;&#x4E3A;&#x7A7A;&#x6821;&#x9A8C;
+    Age int `form:&quot;age&quot;`
+
+}
+
+
+
+func DoBind(context *gin.Context)  {
+
+    var user User
+    err := context.ShouldBind(&amp;user)
+    if err != nil {
+        fmt.Println(err)
+        context.JSON(400,gin.H{
+            &quot;msg&quot;:&quot;fali&quot;,
+            &quot;code&quot;:400,
+        })
+    }
+
+    context.JSON(200,gin.H{
+        &quot;msg&quot;:&quot;success&quot;,
+        &quot;code&quot;:200,
+    })
+
+}
+</code></pre><h2 id="&#x4E8C;&#x3001;&#x5176;&#x4ED6;&#x9A8C;&#x8BC1;&#x5668;">&#x4E8C;&#x3001;&#x5176;&#x4ED6;&#x9A8C;&#x8BC1;&#x5668;</h2>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x591A;&#x4E2A;&#x9A8C;&#x8BC1;&#x5668;&#x4E4B;&#x95F4;&#x7528;&#x82F1;&#x6587;&#x8F93;&#x5165;&#x6CD5;&#x4E0B;&#x7684;&#x9017;&#x53F7;(,)&#x9694;&#x5F00;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x6309;&#x7167;&#x9A8C;&#x8BC1;&#x5668;&#x7684;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x7684;</li>
+<li><p>&#x5982;&#x679C;&#x5E0C;&#x671B;&#x5728;&#x53C2;&#x6570;&#x4E2D;&#x5305;&#x542B;&#x9017;&#x53F7;&#xFF08;&#x5373;excludesall =,&#xFF09;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;UTF-8&#x5341;&#x516D;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x5F62;&#x5F0F;0x2C</p>
+<ul>
+<li><p>e.g.</p>
+<p><code>validate&#xFF1A;&quot;excludesall=0x2C&quot;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>1.-                     &#x5FFD;&#x7565;&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;-&quot;</p>
+<p>2.required&#xFF1A;    &#x5FC5;&#x586B;&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;required&quot;</p>
+<p>3.min               &#x6700;&#x5C0F;&#x957F;&#x5EA6;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;min=10&quot;</p>
+<p>4.max              &#x6700;&#x5927;&#x957F;&#x5EA6;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;max=10&quot;</p>
+<p>5.|                    &#x6216;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;rgb|rgba&quot;</p>
+<p>6.<em><strong>structonly</strong></em><strong> </strong>    &#x5982;&#x679C;&#x6709;&#x5D4C;&#x5957;&#xFF0C;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x53EA;&#x9A8C;&#x8BC1;&#x7ED3;&#x6784;&#x4F53;&#x4E0A;&#x7684;&#xFF0C;binding:&quot;structonly&quot;</p>
+<p>7.Exists</p>
+<p>8.omitempty  &#x7701;&#x7565;&#x7A7A;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x9A8C;&#x8BC1;&#x8BE5;&#x5B57;&#x6BB5;&#x4E0A;&#x5176;&#x4ED6;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x53EA;&#x6709;&#x4E0D;&#x4E3A;&#x7A7A;&#x624D;&#x4F1A;&#x7EE7;&#x7EED;&#x9A8C;&#x8BC1;&#x5176;&#x4ED6;&#x7684;&#xFF0C;&#x5982;max&#x7B49;</p>
+<p>9.dive              &#x5D4C;&#x5957;&#x9A8C;&#x8BC1;</p>
+<pre><code>1.name [][]string  `binding:&quot;gt=0,dive,len=1,dive,required&quot;`
+
+// gt = 0&#x5C06;&#x5E94;&#x7528;&#x4E8E;[]
+// len = 1&#x5C06;&#x5E94;&#x7528;&#x4E8E;[] string
+//&#x5FC5;&#x586B;&#x9879;&#x5C06;&#x5E94;&#x7528;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;
+
+
+
+2.name [][]string  `binding:&quot;gt=0,dive,dive,required&quot;`
+
+// gt = 0 &#x5C06;&#x5E94;&#x7528;&#x4E8E;[]
+// []string &#x5C06;&#x4FDD;&#x7559;&#x9A8C;&#x8BC1;
+//&#x5FC5;&#x586B;&#x9879;&#x5C06;&#x5E94;&#x7528;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;
+</code></pre><p>10.len             &#x957F;&#x5EA6;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;len=10&quot;</p>
+<p>11.eq               &#x7B49;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;eq=10&quot;</p>
+<p>12.ne               &#x4E0D;&#x7B49;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;ne=10&quot;</p>
+<p>13.gt                &#x5927;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;gt=10&quot;</p>
+<p>14.gte                &#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;gte=10&quot;</p>
+<p>15.lt                 &#x5C0F;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;lt=10&quot;</p>
+<p>16.lte                &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#xFF0C;&#x5982;&#xFF1A;binding:&quot;lte=10&quot;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;gt&#x3001;gte&#x3001;lt&#x3001;lte&#x7B49;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x65F6;&#x95F4;&#x7684;&#x6BD4;&#x8F83;&#xFF0C;&#x540E;&#x9762;&#x4E0D;&#x9700;&#x8981;&#x8DDF;&#x503C;&#xFF0C;&#x76F4;&#x63A5;binding:&quot;gt&quot;&#xFF0C;&#x8868;&#x793A;&#x5927;&#x4E8E;&#x5F53;&#x524D;utc&#x65F6;&#x95F4;</p>
+<p>17.eqfield           &#x7B49;&#x4E8E;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x5982;&#xFF1A;Password string `binding:&quot;eqfield=ConfirmPassword&quot;`</p>
+<p>18.nefield           &#x4E0D;&#x7B49;&#x4E8E;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;</p>
+<p>19.eqcsfield       &#x7C7B;&#x4F3C;eqfield&#xFF0C;&#x5B83;&#x4F1A;&#x9A8C;&#x8BC1;&#x76F8;&#x5BF9;&#x4E8E;&#x9876;&#x5C42;&#x7ED3;&#x6784;&#x63D0;&#x4F9B;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;</p>
+<pre><code>&#x5982;&#xFF1A;eqcsfield = InnerStructField.Field&#xFF09;
+</code></pre><p>20.necsfield</p>
+<p>21.gtfield           &#x5927;&#x4E8E;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x7684;&#x503C;</p>
+<p>22.gtefield</p>
+<p>23.gtcsfield</p>
+<p>24.gtecsfield</p>
+<p>25.ltfield            &#x5C0F;&#x4E8E;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x7684;&#x503C;</p>
+<p>26.ltefield</p>
+<p>27.ltcsfield</p>
+<p>28.ltecsfield</p>
+<p>29.<em><strong>alpha</strong></em>           &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4EC5;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x5B57;&#x7B26;</p>
+<p>30.alphanum    &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4EC5;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x5B57;&#x7B26;</p>
+<p>31.numeric       &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x57FA;&#x672C;&#x6570;&#x5B57;&#x503C;&#x3002;&#x57FA;&#x672C;&#x4E0D;&#x5305;&#x62EC;&#x6307;&#x6570;&#x7B49;...</p>
+<p>32.hexadecimal     &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;</p>
+<p>33.hexcolor            &#x9A8C;&#x8BC1;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#xFF0C;&#x5305;&#x62EC;&#x4E95;&#x53F7;&#xFF08;&#xFF03;&#xFF09;</p>
+<p>34.rgb                 &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;rgb&#x989C;&#x8272;</p>
+<p>35.rgba              &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;rgba&#x989C;&#x8272;</p>
+<p>36.HSL               &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;hsl&#x989C;&#x8272;</p>
+<p>37.hsla                &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;hsla&#x989C;&#x8272;</p>
+<p>38.<em><strong>email</strong></em>              &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;</p>
+<p>39.<em><strong>url</strong></em>                  &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7F51;&#x5740;&#xFF0C;&#x5FC5;&#x987B;&#x5305;&#x542B;http://&#x7B49;</p>
+<p>40.uri                   &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;uri&#x3002;&#x5B83;&#x5C06;&#x63A5;&#x53D7;golang&#x8BF7;&#x6C42;uri&#x63A5;&#x53D7;&#x7684;&#x4EFB;&#x4F55;uri</p>
+<p>41.base64        &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;base64&#x503C;</p>
+<p>42.<em><strong>contains</strong></em>       &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;contains=@</p>
+<p>43.containsany     &#x5305;&#x542B;&#x6240;&#x6709;&#xFF0C;containsany =&#xFF01;@&#xFF03;&#xFF1F;</p>
+<p>44.containsrune     &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x63D0;&#x4F9B;&#x7684;&#x7B26;&#x53F7;   containsrune = @</p>
+<p>45.<em><strong>excludes</strong></em>          &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4E0D;&#x5305;&#x542B;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;excludes = @</p>
+<p>46.excludeall          &#x6392;&#x9664;&#x6240;&#x6709;</p>
+<p>47.excluderune       &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4E0D;&#x5305;&#x542B;&#x63D0;&#x4F9B;&#x7684;&#x7B26;&#x53F7;&#xFF0C;excluderune = @</p>
+<p>48.isbn                    &#x56FD;&#x9645;&#x6807;&#x51C6;&#x4E66;&#x53F7;&#xFF0C;&#x9A8C;&#x8BC1;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;isbn10&#x6216;isbn13&#x503C;&#x3002;</p>
+<p>49.isbn10                &#x56FD;&#x9645;&#x6807;&#x51C6;&#x4E66;&#x53F7;10&#xFF0C; &#x9A8C;&#x8BC1;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;isbn10&#x503C;&#x3002;</p>
+<p>50.isbn13               &#x56FD;&#x9645;&#x6807;&#x51C6;&#x4E66;&#x53F7;13&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;isbn13&#x503C;&#x3002;</p>
+<p>51.<em><strong>uuid</strong></em>                 &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;UUID&#x3002;</p>
+<p>52.uuid3               &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7248;&#x672C;3 UUID</p>
+<p>53.uuid4                  &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7248;&#x672C;5 UUID&#x3002;</p>
+<p>54.uuid5                 &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7248;&#x672C;5 UUID&#x3002;</p>
+<p>55.ascii                    &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4EC5;&#x5305;&#x542B;ASCII&#x5B57;&#x7B26;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x9A8C;&#x8BC1;&#x4E3A;true&#x3002;</p>
+<p>56.asciiprint             &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x4EC5;&#x5305;&#x542B;&#x53EF;&#x6253;&#x5370;&#x7684;ASCII&#x5B57;&#x7B26;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x9A8C;&#x8BC1;&#x4E3A;true&#x3002;</p>
+<p>57.multibyte             &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x591A;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x9A8C;&#x8BC1;&#x4E3A;true&#x3002;</p>
+<p>58.datauri                 &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;DataURI&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x8FD8;&#x5C06;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x90E8;&#x5206;&#x662F;&#x6709;&#x6548;&#x7684;base64</p>
+<p>59.latitude                 &#x7EAC;&#x5EA6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7EAC;&#x5EA6;</p>
+<p>60.longitude              &#x7ECF;&#x5EA6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7ECF;&#x5EA6;&#x3002;</p>
+<p>61.ssn                      &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x7F8E;&#x56FD;&#x793E;&#x4F1A;&#x5B89;&#x5168;&#x53F7;&#x7801;</p>
+<p>62.<em><strong>ip</strong></em>                        &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;IP&#x5730;&#x5740;</p>
+<p>63.ipv4                    &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;v4 IP&#x5730;&#x5740;&#x3002;</p>
+<p>64.ipv6                      &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;v6 IP&#x5730;&#x5740;&#x3002;</p>
+<p>65.cidr                        &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;CIDR&#x5730;&#x5740;&#x3002;</p>
+<p>66.cidrv4                  &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;CIDR&#x5730;&#x5740;&#x3002;</p>
+<p>67.cidrv6                  &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;v6 CIDR&#x5730;&#x5740;&#x3002;</p>
+<p>68.tcp_addr             &#x5B57;&#x7B26;&#x4E32;&#x503C;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684;&#x53EF;&#x89E3;&#x6790;TCP&#x5730;&#x5740;&#x3002;</p>
+<p>...</p>
+<p>max,len,min:</p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x6570;&#x5B57;&#xFF0C;max&#x5C06;&#x786E;&#x4FDD;&#x8BE5;&#x503C;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x5C06;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#x662F;&#x5426;&#x6070;&#x597D;&#x7B49;&#x4E8E;&#x8BE5;&#x5B57;&#x7B26;&#x6570;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x5207;&#x7247;&#xFF0C;&#x6570;&#x7EC4;&#x548C;&#x5730;&#x56FE;&#xFF0C;&#x9A8C;&#x8BC1;&#x9879;&#x76EE;&#x6570;</li>
+</ul>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;</p>
+<p><a href="https://godoc.org/gopkg.in/go-playground/validator.v8#hdr-Baked_In_Validators_and_Tags" target="_blank">https://godoc.org/gopkg.in/go-playground/validator.v8#hdr-Baked_In_Validators_and_Tags</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter04/03数据绑定--Mustbind.html" class="navigation navigation-prev " aria-label="Previous page: 第三节:数据绑定--Must bind"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter04/05自定义验证器.html" class="navigation navigation-next " aria-label="Next page: 第五节:自定义验证器"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

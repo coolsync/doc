@@ -1,0 +1,50 @@
+{{define "chapter02/test_upload3.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="/static/js/jquery.min.js"></script>
+</head>
+<body>
+ajax单文件上传 <br>
+
+<form>
+    <input type="file" id="file"><br>
+    <input type="text" id="name"><br>
+    <input type="button" value="提交" id="btn_upload">
+</form>
+
+<script>
+    var btn_upload = document.getElementById("btn_upload");
+    btn_upload.onclick = function (ev) {
+
+        var form_data = new FormData();
+
+        var name = document.getElementById("name").value;
+        form_data.append("file",$("#file")[0].files[0]);
+        form_data.append("name",name);
+        
+        $.ajax({
+            url:"/chapter02/test_do_upload3",
+            type:"POST",
+            data:form_data,
+            contentType:false,
+            processData:false,
+            success:function (data) {
+                
+            },
+            fail:function (data) {
+                
+            }
+        })
+        
+        
+        
+
+    }
+</script>
+</body>
+</html>
+{{end}}

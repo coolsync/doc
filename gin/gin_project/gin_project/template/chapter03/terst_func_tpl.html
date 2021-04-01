@@ -1,0 +1,124 @@
+{{define "chapter03/terst_func_tpl.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+这是模板函数页面 <br>
+
+
+{{print "hallen"}}
+<br>
+{{printf "name:%s,age:%d" "hallen" 18}}
+<br>
+{{println "hallen"}}
+<br>
+
+
+{{"hallen" | printf "%s"}}
+<br>
+{{"hallen" | len}}
+<br>
+
+
+{{printf "name:%s,addr:%s" "hallen" (printf "%s-%s" "北京市" "西城区")}}
+
+<br>
+
+{{and .name .age}}
+<br>
+{{and .age .name}}
+<br>
+{{and .addr .name}}
+
+<br>
+
+{{or .name .age}}
+<br>
+{{or .addr .age}}
+
+
+<br>
+
+{{index .slice_data 1}}
+<br>
+{{index .slice_data 0}}
+<br>
+
+{{index .map_test "name"}}
+<br>
+{{index .map_test "age"}}
+<br>
+
+{{index "hallen" 1}}
+
+
+<br>
+{{"hallen" | len}}
+<br>
+
+{{len "hallen"}}
+<br>
+
+{{not .name}}
+<br>
+{{not .xxx}}
+
+<br>
+
+{{urlquery "https://www.baidu.com/"}}
+
+<br>
+
+
+{{eq 18 19}}
+<br>
+{{ne 18 19}}
+<br>
+{{lt 18 19}}
+<br>
+{{le 18 18}}
+<br>
+{{gt 18 19}}
+<br>
+{{ge 19 18}}
+
+<br>
+
+{{eq 18 19 10 17 18}}
+<br>
+{{eq 18 10 11 12 11}}
+<br>
+{{.now_time}}
+<br>
+{{.now_time.Format "2006-04-05 15:04:05"}}
+
+<br>
+
+{{/*<a href="https://www.baidu.com/">百度</a>*/}}
+
+{{"<a href='https://www.baidu.com/'>百度</a>"}}
+<br>
+{{html "<a href='https://www.baidu.com/'>百度</a>"}}
+<br>
+
+{{js "<script>alert(111)</script>"}}
+
+<br>
+
+{{add 1 3}}
+<br>
+{{add 5 6}}
+<br>
+
+{{sub_str "qwerq" 4}}
+
+<br>
+{{safe "<a href='https://www.baidu.com/'>百度</a>"}}
+
+</body>
+</html>
+
+{{end}}
